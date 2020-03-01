@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,9 +8,11 @@ using System.Xml.Serialization;
 
 namespace Assignment5.Data
 {
+    [XmlRoot("ItemsData")]
     public class ItemsData
     {
-        [XmlArray]
+        [XmlArray("Items")]
+        [XmlArrayItem("Item")]
         public List<Item> Items { get; set; }
 
         /// <summary>
@@ -28,7 +31,7 @@ namespace Assignment5.Data
         public List<Item> UnlockedItemsAtLevel(int level)
         {
             // TODO: implement function to get all items and add unit to confirm it works.
-            throw new NotImplementedException();
+            return Items.Where(x => x.UnlockRequirement <= level) as List<Item>;
         }
 
         /// <summary>
@@ -39,7 +42,7 @@ namespace Assignment5.Data
         public Item FindItem(string name)
         {
             // TODO: implement function to find the item with the name specified.
-            throw new NotImplementedException();
+            return Items.FirstOrDefault(x => x.Name == name);
         }
     }
 }

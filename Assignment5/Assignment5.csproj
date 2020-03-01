@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Inventory.cs" />
+    <Compile Include="Data\ItemReader.cs" />
     <Compile Include="Data\ItemsData.cs" />
     <Compile Include="Data\Item.cs" />
     <Compile Include="Data\Pokedex.cs" />

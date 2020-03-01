@@ -31,7 +31,7 @@ namespace Assignment5.Data
         public List<Item> UnlockedItemsAtLevel(int level)
         {
             // TODO: implement function to get all items and add unit to confirm it works.
-            return Items.Where(x => x.UnlockRequirement <= level) as List<Item>;
+            return Items.Where(x => x.UnlockRequirement <= level).ToList();
         }
 
         /// <summary>

@@ -29,28 +29,28 @@ namespace Assignment5.Data
             return Pokemons.FirstOrDefault(x => x.Name == name);
         }
 
-        List<Pokemon> GetPokemonsOfType(string type)
+        public List<Pokemon> GetPokemonsOfType(string type)
         {
             // Note to check both Type1 and Type2
-            return Pokemons.Where(x => x.Type1 == type || x.Type2 == type) as List<Pokemon>;
+            return Pokemons.Where(x => x.Type1 == type || x.Type2 == type).ToList();
         }
 
-        Pokemon GetHighestHPPokemon()
+        public Pokemon GetHighestHPPokemon()
         {
             return Pokemons.OrderByDescending(x => x.HP).First();
         }
 
-        Pokemon GetHighestAttackPokemon()
+        public Pokemon GetHighestAttackPokemon()
         {
             return Pokemons.OrderByDescending(x => x.Attack).First();
         }
 
-        Pokemon GetHighestDefensePokemon()
+        public Pokemon GetHighestDefensePokemon()
         {
             return Pokemons.OrderByDescending(x => x.Defense).First();
         }
 
-        Pokemon GetHighestMaxCPPokemon()
+        public Pokemon GetHighestMaxCPPokemon()
         {
             return Pokemons.OrderByDescending(x => x.MaxCP).First();
         }

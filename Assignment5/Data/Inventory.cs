@@ -9,6 +9,7 @@ using System.Xml.Serialization;
 
 namespace Assignment5.Data
 {
+    [XmlRoot("Inventory")]
     public class Inventory
     {
         // Since Dictionaries are not serializable in XML, we use this for serialization

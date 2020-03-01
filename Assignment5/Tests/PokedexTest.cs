@@ -49,7 +49,7 @@ namespace Assignment5.Test
         }
 
         [Test]
-        public void SaveLoadPokebagTest()
+        public void SaveLoadPokedexTest()
         {
             PokemonWriter pokemonWriter = new PokemonWriter();
             pokedex = new Pokedex();

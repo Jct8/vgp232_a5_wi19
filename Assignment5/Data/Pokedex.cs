@@ -19,14 +19,14 @@ namespace Assignment5.Data
             Pokemons = new List<Pokemon>();
         }
 
-        Pokemon GetPokemonByIndex(int index)
+        public Pokemon GetPokemonByIndex(int index)
         {
-            throw new NotImplementedException();
+            return Pokemons.FirstOrDefault(x => x.Index == index);
         }
 
-        Pokemon GetPokemonByName(string name)
+        public Pokemon GetPokemonByName(string name)
         {
-            throw new NotImplementedException();
+            return Pokemons.FirstOrDefault(x => x.Name == name);
         }
 
         List<Pokemon> GetPokemonsOfType(string type)

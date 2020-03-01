@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\PokemonWriter.cs" />
     <Compile Include="Tests\PokeBagTest.cs" />
     <Compile Include="Data\Pokedex.cs" />
     <Compile Include="Tests\PokedexTest.cs" />

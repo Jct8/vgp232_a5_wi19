@@ -29,6 +29,7 @@ namespace Assignment5
             // and save it out and load it back and list it out.
             PokemonBag pokemonBag = new PokemonBag();
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
+            pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Charizard").Index);
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Mew").Index);
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Dragonite").Index);

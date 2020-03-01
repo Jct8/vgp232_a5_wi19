@@ -44,7 +44,7 @@ namespace Assignment5.Test
         }
 
         [Test]
-        public void SavePokeBagLoad()
+        public void SavePokeBag()
         {
             PokemonBag pokemonBag = new PokemonBag();
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
@@ -53,6 +53,29 @@ namespace Assignment5.Test
             pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Dragonite").Index);
             pokemonBag.Save(saveFile);
             FileAssert.Exists(saveFile);
+        }
+
+        [Test]
+        public void SaveLoadPokebagTest()
+        {
+            PokemonBag pokemonBag = new PokemonBag();
+            pokemonBag.Pokemons.Clear();
+            pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
+            pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Charizard").Index);
+            pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Mew").Index);
+            pokemonBag.Pokemons.Add(pokedex.GetPokemonByName("Dragonite").Index);
+            pokemonBag.Save(saveFile);
+            FileAssert.Exists(saveFile);
+            pokemonBag.Pokemons.Clear();
+            try
+            {
+                pokemonBag.Load(saveFile);
+            }
+            catch
+            {
+                Assert.IsTrue(false);
+            }
+            Assert.IsTrue(pokemonBag.Pokemons.Count >= 4);
         }
     }
 }

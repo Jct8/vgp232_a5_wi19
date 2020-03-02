@@ -66,7 +66,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\InventoryTest.cs" />
     <Compile Include="Tests\ItemsDataTest.cs" />
-    <Compile Include="Tests\PokedexTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

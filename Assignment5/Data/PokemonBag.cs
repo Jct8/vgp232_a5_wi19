@@ -26,9 +26,10 @@ namespace Assignment5.Data
             using (var streamWriter = new StreamWriter(fileName))
             {
                 var xmlSerializer = new XmlSerializer(typeof(List<int>));
-                xmlSerializer.Serialize(streamWriter,Pokemons);
+                xmlSerializer.Serialize(streamWriter, Pokemons);
             }
         }
+
         public void Load(string filepath)
         {
             if (!File.Exists(filepath))

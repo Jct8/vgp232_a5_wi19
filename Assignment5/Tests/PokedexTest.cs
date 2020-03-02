@@ -16,7 +16,7 @@ namespace Assignment5.Tests
         string loadFile = null;
         string myDirPath;
         PokemonReader reader = new PokemonReader();
-        Pokedex pokedex;
+        Pokedex pokedex = new Pokedex();
 
         [SetUp]
         public void Initialization()
